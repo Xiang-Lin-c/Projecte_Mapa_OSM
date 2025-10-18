@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <Platform>x86;x64</Platform>
+	  <!-- <TargetFramework>net.0-windows10.0.19041.0</TargetFramework>-->
+    <RootNamespace>LP_OSM_2223_WPF</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject></StartupObject>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <OutputPath>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+    <ItemGroup>
+		<ProjectReference Include="..\LP-OSM-DLL-2022\LP-OSM-DLL-2022.vcxproj">
+		  <Private>True</Private>
+		</ProjectReference>
+
+        <Content Update="..\third-party\xerces-c_3_2D.dll" CopyToOutputDirectory="PreserveNewest" />
+
+		<Content Include="..\x64\$(Configuration)\*.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls" Version="6.1.2" />
+      <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Properties\Settings.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Settings.settings</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Properties\Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+
+</Project>
