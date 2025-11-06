@@ -164,11 +164,10 @@
     </Link>
   </ItemDefinitionGroup>
   <Target Name="CopyThirdPartyDll" AfterTargets="Build">
-    <Copy SourceFiles="$(ProjectDir)..\third-party\xerces-c_3_2D.dll"
-          DestinationFolder="$(OutDir)"
-          SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)..\third-party\xerces-c_3_2D.dll" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
   </Target>
   <ItemGroup>
+    <ClInclude Include="CamiSolucio.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MapaRender.h" />
@@ -176,10 +175,13 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="CamiBase.h" />
     <ClInclude Include="PuntDeInteresBase.h" />
+    <ClInclude Include="PuntDeInteresBotigaSolucio.h" />
+    <ClInclude Include="PuntDeInteresRestaurantSolucio.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="XML4OSMUtil.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CamiSolucio.cpp" />
     <ClCompile Include="DLL-Bridge.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="MapaRender.cpp" />
@@ -190,6 +192,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PuntDeInteresBase.cpp" />
+    <ClCompile Include="PuntDeInteresBotigaSolucio.cpp" />
+    <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="XML4OSMUtil.cpp" />
   </ItemGroup>
