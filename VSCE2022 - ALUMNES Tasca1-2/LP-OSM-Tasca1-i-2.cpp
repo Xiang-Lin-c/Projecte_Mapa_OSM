@@ -88,7 +88,35 @@ int main()
 		Recordeu que en la solució de la pràctica haureu de recollir tots els punts d’interés, 
 		que per definició, són nodes que no són nodes de camí que tenen un atribut name.
 	*/
+	std::string id, name;
+	double lat = 0.0, lon = 0.0;
 
+	for (auto& atribut : viejoRoble.atributs) {
+		if (atribut.first == "id") {
+			id = atribut.second;
+		}
+		else if (atribut.first == "lat") {
+			lat = std::stod(atribut.second);
+		}
+		else if (atribut.first == "lon") {
+			lon = std::stod(atribut.second);
+		}
+	}
+
+	for (auto& fill : viejoRoble.fills) {
+		if (fill.first == "tag") {
+			auto tag = Util::kvDeTag(fill.second);
+			if (tag.first == "name") {
+				name = tag.second;
+			}
+		}
+	}
+
+	std::cout << "Tasca 1:" << std::endl;
+	std::cout << "Identificador: " << id << std::endl;
+	std::cout << "Latitud: " << lat << std::endl;
+	std::cout << "Longitud: " << lon << std::endl;
+	std::cout << "Nom: " << name << std::endl;
 	// TODO Tasca1 
 
 	XmlElement camiJoaquim = {
@@ -168,7 +196,31 @@ int main()
 		tots els camins que tenen el tag highway (independentment del valor que pugui tenir), 
 		així com saber quins nodes de tipus camí, formen cada camí.
 	*/
+	std::string highwayValue;
+	std::vector<std::string> nodeRefs;
 
+	for (auto& fill : camiJoaquim.fills) {
+		if (fill.first == "nd") {
+			for (auto& ref : fill.second) {
+				if (ref.first == "ref") {
+					nodeRefs.push_back(ref.second);
+				}
+			}
+		}
+		else if (fill.first == "tag") {
+			auto tag = Util::kvDeTag(fill.second);
+			if (tag.first == "highway") {
+				highwayValue = tag.second;
+			}
+		}
+	}
+
+	std::cout << "Tasca 2:" << std::endl;
+	std::cout << "Nodes que formen el cami:" << std::endl;
+	for (auto& ref : nodeRefs) {
+		std::cout << "- " << ref << std::endl;
+	}
+	std::cout << "Valor del atribut highway: " << highwayValue << std::endl;
 	// TODO Tasca2 
 
 	return 0;
