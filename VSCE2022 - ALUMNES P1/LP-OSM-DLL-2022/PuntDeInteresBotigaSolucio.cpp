@@ -1,8 +1,6 @@
 #include "pch.h"
 #include "PuntDeInteresBotigaSolucio.h"
 
-PuntDeInteresBotigaSolucio::PuntDeInteresBotigaSolucio(Coordinate coord, std::string name, std::string shop, std::string openingHours, std::string wheelchair): PuntDeInteresBase(coord, name), m_shop(shop), m_openingHours(openingHours), m_wheelchair(wheelchair) {
-}
 
 std::string PuntDeInteresBotigaSolucio::getName() 
 {

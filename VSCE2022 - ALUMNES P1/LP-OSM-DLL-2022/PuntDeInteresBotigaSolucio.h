@@ -9,8 +9,9 @@ private:
     std::string m_wheelchair;
 
 public:
-    PuntDeInteresBotigaSolucio(Coordinate coord, std::string name, std::string shop, std::string openingHours = "", std::string wheelchair = "no");
 
+    PuntDeInteresBotigaSolucio(Coordinate coord, std::string name, std::string shop, std::string openingHours, std::string wheelchair) : PuntDeInteresBase(coord, name), m_shop(shop), m_openingHours(openingHours), m_wheelchair(wheelchair) {
+    }
     std::string getName() override;
     unsigned int getColor() override;
 };

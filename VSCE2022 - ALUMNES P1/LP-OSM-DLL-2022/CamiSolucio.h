@@ -8,6 +8,5 @@ private:
 
 public:
     CamiSolucio(); 
-
     std::vector<Coordinate> getCamiCoords() override; 
 };
