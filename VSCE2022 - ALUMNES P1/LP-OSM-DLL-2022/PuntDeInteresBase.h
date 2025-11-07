@@ -6,7 +6,7 @@
 
 class PuntDeInteresBase {
 
-	private:
+	protected:
 		Coordinate m_coord;
 		std::string m_name;
 
@@ -17,5 +17,4 @@ class PuntDeInteresBase {
 		virtual std::string getName();
 		Coordinate getCoord();
 		virtual unsigned int getColor();
-
 };
