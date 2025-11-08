@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LP-OSM-WPF-2022")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3451e6e0ce20def6897094c9c1ac24117f6891c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3feb1ceb0b47d8906245560f9d83dc29ef9a0d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LP-OSM-WPF-2022")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LP-OSM-WPF-2022")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

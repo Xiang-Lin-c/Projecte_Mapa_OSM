@@ -3,16 +3,29 @@
 
 MapaSolucio::MapaSolucio() {
 }
+MapaSolucio::~MapaSolucio() {
+	for (auto p : m_camins) delete p;
+	for (auto p : m_pInteres) delete p;
+}
 void MapaSolucio::afegirNodes(const XmlElement& xmlElement) {
-	string id;
-	Coordinate coordenada = { 0,0 };
+	string id = "";
+	Coordinate coordenada;
+	double lat = 0.0, lon = 0.0;
 	id = xmlElement.atributs[0].second	;
 	for (int i = 0; i < xmlElement.atributs.size(); i++) {
-		if (xmlElement.atributs[i].first == "lat") {
-			coordenada = { stod(xmlElement.atributs[i].second), stod(xmlElement.atributs[i + 1].second) };
-			break;
+		if (xmlElement.atributs[i].first == "id")
+		{	
+			id = xmlElement.atributs[i].second;
+
 		}
+		if (xmlElement.atributs[i].first == "lat") {
+			lat = stod(xmlElement.atributs[i].second);
+		}
+
+		if (xmlElement.atributs[i].first == "lon")
+			lon = stod(xmlElement.atributs[i].second);
 	}
+	coordenada = { lat, lon };
 	m_nodes.push_back(make_pair(id, coordenada));
 }
 void MapaSolucio::afegirPuntInteres( XmlElement xmlElement) {
@@ -20,6 +33,7 @@ void MapaSolucio::afegirPuntInteres( XmlElement xmlElement) {
 	string shop, openinghour;
 	string amenity, cuisine;
 	Coordinate coordenada = { 0,0 };
+	double lat = 0.0, lon = 0.0;
 	bool kindPlace = 0;  // 0 botiga,  1 restaurant
 	for (int i = 0; i < xmlElement.fills.size(); i++) {
 		if (xmlElement.fills[i].first == "tag") {
@@ -45,11 +59,16 @@ void MapaSolucio::afegirPuntInteres( XmlElement xmlElement) {
 		}
 	}
 	for (int i = 0; i < xmlElement.atributs.size(); i++) {
+
 		if (xmlElement.atributs[i].first == "lat") {
-			coordenada = { stod(xmlElement.atributs[i].second), stod(xmlElement.atributs[i + 1].second) };
-			break;
+			lat = stod(xmlElement.atributs[i].second);
 		}
+
+		if (xmlElement.atributs[i].first == "lon")
+			lon = stod(xmlElement.atributs[i].second);
 	}
+	coordenada = { lat, lon };
+	
 	PuntDeInteresBase* p;
 	if (kindPlace == 0) {
 		p = new PuntDeInteresBotigaSolucio(coordenada, name, shop, openinghour, wheelchair);
@@ -89,6 +108,7 @@ void MapaSolucio::afegirCamins(XmlElement xmlElement) {
 			}
 		}
 	}
+
 	c = new CamiSolucio(id, tipus);
 	c->afegirCoordenada(coordenades);
 	m_camins.push_back(c);
@@ -124,7 +144,6 @@ void MapaSolucio::parsejaXmlElements(std::vector<XmlElement>& xmlElements) {
 		}
 		else if(xmlElements[i].id_element == "way") {
 			afegirCamins(xmlElements[i]);
-
 		}
 	}
 }

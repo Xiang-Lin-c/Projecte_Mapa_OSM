@@ -1,2 +1,17 @@
-﻿  MapaSolucio.cpp
+﻿  pch.cpp
+  CamiSolucio.cpp
+  DLL-Bridge.cpp
+  dllmain.cpp
+  MapaRender.cpp
+C:\Users\cnlin\Desktop\Uni\2n\LP\Projecte_Mapa\Repositorio_Mapa_OSM\VSCE2022 - ALUMNES P1\LP-OSM-DLL-2022\MapaRender.cpp(38,55): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/MapaRender.cpp')
+  
+  MapaSolucio.cpp
+  PuntDeInteresBase.cpp
+  PuntDeInteresBotigaSolucio.cpp
+  PuntDeInteresRestaurantSolucio.cpp
+  Util.cpp
+  XML4OSMUtil.cpp
+  Generating Code...
+     Creating library C:\Users\cnlin\Desktop\Uni\2n\LP\Projecte_Mapa\Repositorio_Mapa_OSM\VSCE2022 - ALUMNES P1\bin\x64\Debug\netcoreapp3.1\LP-OSM-DLL-2022.lib and object C:\Users\cnlin\Desktop\Uni\2n\LP\Projecte_Mapa\Repositorio_Mapa_OSM\VSCE2022 - ALUMNES P1\bin\x64\Debug\netcoreapp3.1\LP-OSM-DLL-2022.exp
   LP-OSM-DLL-2022.vcxproj -> C:\Users\cnlin\Desktop\Uni\2n\LP\Projecte_Mapa\Repositorio_Mapa_OSM\VSCE2022 - ALUMNES P1\bin\x64\Debug\netcoreapp3.1\LP-OSM-DLL-2022.dll

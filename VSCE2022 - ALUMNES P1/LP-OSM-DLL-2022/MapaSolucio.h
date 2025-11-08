@@ -22,6 +22,6 @@ private:
 	void afegirPuntInteres(XmlElement xmlElement);
 	void afegirCamins(XmlElement xmlElement);
 	vector<PuntDeInteresBase*> m_pInteres;
-	vector<CamiBase*> m_camins;
+	vector<CamiBase*> m_camins;	
 	vector<pair <string, Coordinate>> m_nodes;
 };
