@@ -1030,19 +1030,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cnlin\\.nuget\\packages\\": {}
+    "C:\\Users\\marcv\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cnlin\\Desktop\\Uni\\2n\\LP\\Projecte_Mapa\\Repositorio_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-WPF-2022\\LP-OSM-WPF-2022.csproj",
+      "projectUniqueName": "C:\\Users\\marcv\\source\\repos\\Xiang-Lin-c\\Projecte_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-WPF-2022\\LP-OSM-WPF-2022.csproj",
       "projectName": "LP-OSM-WPF-2022",
-      "projectPath": "C:\\Users\\cnlin\\Desktop\\Uni\\2n\\LP\\Projecte_Mapa\\Repositorio_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-WPF-2022\\LP-OSM-WPF-2022.csproj",
-      "packagesPath": "C:\\Users\\cnlin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cnlin\\Desktop\\Uni\\2n\\LP\\Projecte_Mapa\\Repositorio_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-WPF-2022\\obj\\",
+      "projectPath": "C:\\Users\\marcv\\source\\repos\\Xiang-Lin-c\\Projecte_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-WPF-2022\\LP-OSM-WPF-2022.csproj",
+      "packagesPath": "C:\\Users\\marcv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marcv\\source\\repos\\Xiang-Lin-c\\Projecte_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-WPF-2022\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cnlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marcv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1056,8 +1061,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\cnlin\\Desktop\\Uni\\2n\\LP\\Projecte_Mapa\\Repositorio_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-DLL-2022\\LP-OSM-DLL-2022.vcxproj": {
-              "projectPath": "C:\\Users\\cnlin\\Desktop\\Uni\\2n\\LP\\Projecte_Mapa\\Repositorio_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-DLL-2022\\LP-OSM-DLL-2022.vcxproj"
+            "C:\\Users\\marcv\\source\\repos\\Xiang-Lin-c\\Projecte_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-DLL-2022\\LP-OSM-DLL-2022.vcxproj": {
+              "projectPath": "C:\\Users\\marcv\\source\\repos\\Xiang-Lin-c\\Projecte_Mapa_OSM\\VSCE2022 - ALUMNES P1\\LP-OSM-DLL-2022\\LP-OSM-DLL-2022.vcxproj"
             }
           }
         }
@@ -1071,7 +1076,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "netcoreapp3.1": {
@@ -1110,7 +1116,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

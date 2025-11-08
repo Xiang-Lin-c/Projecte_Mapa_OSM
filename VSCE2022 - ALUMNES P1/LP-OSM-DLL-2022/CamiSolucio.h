@@ -9,4 +9,5 @@ private:
 public:
     CamiSolucio(); 
     std::vector<Coordinate> getCamiCoords() override; 
+    void setCoords(const std::vector<Coordinate>& coords) { m_coords = coords;}
 };

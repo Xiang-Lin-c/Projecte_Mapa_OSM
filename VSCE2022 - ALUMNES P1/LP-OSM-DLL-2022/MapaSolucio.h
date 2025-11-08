@@ -9,16 +9,17 @@
 	#include "CamiSolucio.h"
 	#include "Util.h"
 	#include <vector>
-	class MapaSolucio : public MapaBase {
-	public:
-		MapaSolucio();
-		~MapaSolucio() { delete pBotiga; delete pRestaurant; }
-		void getPdis(std::vector<PuntDeInteresBase*>&) override;
-		void getCamins(std::vector<CamiBase*>& camins) override;
-		void parsejaXmlElements(std::vector<XmlElement>& xmlElements) override;
+class MapaSolucio : public MapaBase 
+{
+public:
+	MapaSolucio();
+	~MapaSolucio();
 
-	private:
-		PuntDeInteresBotigaSolucio* pBotiga;
-		PuntDeInteresRestaurantSolucio* pRestaurant;
-		std::vector<CamiBase*> m_camins;
-	};
+	void getPdis(std::vector<PuntDeInteresBase*>&) override;
+	void getCamins(std::vector<CamiBase*>& camins) override;
+	void parsejaXmlElements(std::vector<XmlElement>& xmlElements) override;
+
+private:
+	std::vector<PuntDeInteresBase*> m_pdis;
+	std::vector<CamiSolucio*> m_camins;
+};

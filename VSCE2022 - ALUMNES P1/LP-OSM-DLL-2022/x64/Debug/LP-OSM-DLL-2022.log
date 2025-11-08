@@ -1,2 +1,1 @@
-﻿  MapaSolucio.cpp
-  LP-OSM-DLL-2022.vcxproj -> C:\Users\cnlin\Desktop\Uni\2n\LP\Projecte_Mapa\Repositorio_Mapa_OSM\VSCE2022 - ALUMNES P1\bin\x64\Debug\netcoreapp3.1\LP-OSM-DLL-2022.dll
+﻿LINK : fatal error LNK1104: no se puede abrir el archivo 'xerces-c_3D.lib'
