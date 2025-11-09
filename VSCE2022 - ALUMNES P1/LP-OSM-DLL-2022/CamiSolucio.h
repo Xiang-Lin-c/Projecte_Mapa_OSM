@@ -15,4 +15,5 @@ public:
     CamiSolucio(string id, string tipus) : m_id(id), m_tipus(tipus) {};
     std::vector<Coordinate> getCamiCoords() override; 
     void afegirCoordenada(vector<Coordinate>& c) override;
+    string getTipus() { return m_tipus; }
 };

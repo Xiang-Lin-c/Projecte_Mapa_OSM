@@ -124,6 +124,7 @@ void MapaSolucio::getPdis(std::vector<PuntDeInteresBase*>& pdis) {
 
 void MapaSolucio::getCamins(std::vector<CamiBase*>& camins){
 	for (int i = 0; i < m_camins.size(); i++){
+		if(m_camins[i]->getTipus() == "highway")
 		camins.push_back(m_camins[i]);
 	}
 }
