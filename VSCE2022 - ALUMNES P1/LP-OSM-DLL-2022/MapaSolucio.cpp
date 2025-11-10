@@ -7,6 +7,9 @@ MapaSolucio::~MapaSolucio() {
 	for (auto p : m_camins) delete p;
 	for (auto p : m_pInteres) delete p;
 }
+
+
+
 void MapaSolucio::afegirNodes(const XmlElement& xmlElement) {
 	string id = "";
 	Coordinate coordenada;

@@ -10,6 +10,5 @@ private:
 public:
     PuntDeInteresRestaurantSolucio(Coordinate coord, std::string name, std::string cuisine, std::string wheelchair = "no");
 
-    std::string getName() override;
     unsigned int getColor() override;
 };

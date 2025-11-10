@@ -3,10 +3,6 @@
 
 PuntDeInteresRestaurantSolucio::PuntDeInteresRestaurantSolucio(Coordinate coord, std::string name, std::string cuisine, std::string wheelchair):PuntDeInteresBase(coord, name), m_cuisine(cuisine), m_wheelchair(wheelchair) {}
 
-std::string PuntDeInteresRestaurantSolucio::getName() 
-{
-    return m_name;
-}
 
 unsigned int PuntDeInteresRestaurantSolucio::getColor() 
 {
